@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alexa Voice Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>🤖 Shravan's AI Assistant</h1>
+        <p>Your Personal Voice Assistant</p>
+    </div>
+
+    <div class="mic-area">
+        <a href="/listen">
+            <button class="mic-btn">🎤 Tap to Speak</button>
+        </a>
+        <h6 class="comm">Instructions:-First tap and then speak 🗣️ and wait ⏳ for the response</h6>
+    </div>
+
+    {% if command %}
+    <div class="chat-box">
+        <div class="user-msg">
+            <span>You👦:</span> {{ command }}
+        </div>
+        <div class="bot-msg">
+            <span>Alexa🤖:</span> {{ response }}
+        </div>
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
